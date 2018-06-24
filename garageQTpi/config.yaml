@@ -1,0 +1,20 @@
+mqtt:
+    host: 192.168.*.** 
+    port: 1883
+    user: **********
+    password: **************
+doors:
+    -
+        id: North Door
+        relay: 16
+        state: 27
+#        state_mode: normaly_closed #defaults to normally open, uncomment to switch
+#        invert_relay: true #defaults to false, uncomment to turn relay pin on by default
+        state_topic: "home-assistant/cover/north"
+        command_topic: "home-assistant/cover/north/set"
+    -
+        id: South Door
+        relay: 22
+        state: 23
+        state_topic: "home-assistant/cover/south"
+        command_topic: "home-assistant/cover/south/set"
